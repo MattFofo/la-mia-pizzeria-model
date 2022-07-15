@@ -24,6 +24,8 @@
                     @RenderBody()
                 </main>
             </div>
+            @Html.Partial("_SectionPizzePopolariLayout")
+
         } else
         {
             <div class="container">
@@ -33,8 +35,6 @@
             </div>
         }
     }
-
-
 
     @Html.Partial("_MainFooter")
 
