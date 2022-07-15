@@ -4,18 +4,26 @@
 
 <h1>Ecco le nostre Pizze</h1>
 
+<button class="btn btn-primary" id="change-table-cards-view">Tabella</button>
 
-@{
+<div class="" id="table-layout">
+    @Html.Partial("_TableLayout");
+</div>
+
+
+<div class="d-none" id="cards-layout">
+    @Html.Partial("_CardsLayout");
+</div>
+
+@*@{
     bool isTableView = true;
-}
+}*@
 
-<button onclick="@{ isTableView = !isTableView; }" class="btn btn-primary">Tabella</button>
-
-@if (isTableView)
+@*@if (isTableView)
 {
     @Html.Partial("_TableLayout");
 
 } else 
 {
     @Html.Partial("_CardsLayout");
-}
+}*@
