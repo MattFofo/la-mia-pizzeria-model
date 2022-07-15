@@ -2,28 +2,33 @@
     ViewData["Title"] = "Lista Pizze";
 }
 
-<h1>Ecco le nostre Pizze</h1>
+<div class="container">
+    <div class="row">
+        <h1>Ecco le nostre Pizze</h1>
+        <div class="col-2 my-3">
+            <button class="btn btn-primary" id="change-table-cards-view">Vedi Cards</button>
+        </div>
 
-<button class="btn btn-primary" id="change-table-cards-view">Tabella</button>
+        <div class="" id="table-layout">
+            @Html.Partial("_TableLayout")
+        </div>
 
-<div class="" id="table-layout">
-    @Html.Partial("_TableLayout");
+
+        <div class="d-none" id="cards-layout">
+            @Html.Partial("_CardsLayout")
+        </div>
+
+        @*@{
+            bool isTableView = true;
+        }*@
+
+        @*@if (isTableView)
+        {
+            @Html.Partial("_TableLayout");
+
+        } else 
+        {
+            @Html.Partial("_CardsLayout");
+        }*@
+    </div>
 </div>
-
-
-<div class="d-none" id="cards-layout">
-    @Html.Partial("_CardsLayout");
-</div>
-
-@*@{
-    bool isTableView = true;
-}*@
-
-@*@if (isTableView)
-{
-    @Html.Partial("_TableLayout");
-
-} else 
-{
-    @Html.Partial("_CardsLayout");
-}*@

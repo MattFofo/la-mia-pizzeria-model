@@ -16,9 +16,11 @@ if (btnToogleViewFromTableToCards) {
         if (isTable) {
             tableViewContainer.classList.remove("d-none");
             cardsViewContainer.classList.add("d-none");
+            btnToogleViewFromTableToCards.innerHTML = "Vedi cards"
         } else {
             tableViewContainer.classList.add("d-none");
             cardsViewContainer.classList.remove("d-none");
+            this.innerHTML = "Vedi Tabella"
         };
     });
 
