@@ -40,3 +40,17 @@ html {
 }
 
 
+.bg-content {
+    background-image: url(https://localhost:7009/images/img9.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-pizza-list {
+    box-shadow: -4px -3px 45px 21px rgba(0,0,0,0.35);
+}
+
+.table-pizza-list {
+    border-radius: 12px;
+    box-shadow: -4px -3px 45px 21px rgba(0,0,0,0.35);
+}
