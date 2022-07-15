@@ -51,6 +51,7 @@ html {
 }
 
 .table-pizza-list {
+    background-color: ghostwhite;
     border-radius: 12px;
     box-shadow: -4px -3px 45px 21px rgba(0,0,0,0.35);
 }
