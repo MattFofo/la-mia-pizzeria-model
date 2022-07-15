@@ -23,7 +23,12 @@ namespace la_mia_pizzeria_static.Controllers
         // GET: PizzasController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            using(PizzeriaContext context = new PizzeriaContext())
+            {
+                Pizza pizza = context.Pizzas.Where(pizza => pizza.Id == id).FirstOrDefault();
+
+                return View(pizza);
+            }
         }
 
         // GET: PizzasController/Create
