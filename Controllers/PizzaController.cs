@@ -12,17 +12,10 @@ namespace la_mia_pizzeria_static.Controllers
         {
             using (PizzeriaContext context = new PizzeriaContext())
             {
+
                 List<Pizza> listPizzas = context.Pizzas.ToList();
 
-                if (listPizzas.Count() == 0)
-                {
-                    return 
-
-                } else
-                {
-                    return View(listPizzas);
-                }
-                
+                return View(listPizzas);
             }
 
         }
