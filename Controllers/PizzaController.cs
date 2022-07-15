@@ -1,14 +1,30 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using la_mia_pizzeria_static.DataBase;
+using la_mia_pizzeria_static.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace la_mia_pizzeria_static.Controllers
 {
-    public class PizzasController : Controller
+    public class PizzaController : Controller
     {
         // GET: PizzasController
         public ActionResult Index()
         {
-            return View();
+            using (PizzeriaContext context = new PizzeriaContext())
+            {
+                List<Pizza> listPizzas = context.Pizzas.ToList();
+
+                if (listPizzas.Count() == 0)
+                {
+                    return 
+
+                } else
+                {
+                    return View(listPizzas);
+                }
+                
+            }
+
         }
 
         // GET: PizzasController/Details/5
