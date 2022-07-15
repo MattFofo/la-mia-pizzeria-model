@@ -1,0 +1,25 @@
+﻿@*
+    Pizzas Index
+*@
+
+@{
+    ViewData["Title"] = "Lista Pizze";
+}
+
+<h1>Ecco le nostre Pizze</h1>
+
+
+@{
+    bool isTableView = true;
+}
+
+<button onclick="@{ isTableView = !isTableView; }" class="btn btn-primary">Tabella</button>
+
+@if (isTableView)
+{
+    @Html.Partial("_TableLayout");
+
+} else 
+{
+    @Html.Partial("_CardsLayout");
+}
